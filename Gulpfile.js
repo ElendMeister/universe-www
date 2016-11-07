@@ -120,3 +120,7 @@ gulp.task('watch', ['lint'], function() {
 });
 
 gulp.task('default', ['dev', 'watch']);
+
+gulp.task('export',['dev']);
+
+gulp.task('min',['dev']);

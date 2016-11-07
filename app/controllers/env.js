@@ -9,16 +9,16 @@ module.exports = function($scope,$rootScope,socket,renderer) {
 
   var start = function() {
 
-    $rootScope._data.animationId = requestAnimationFrame(start);
+    $rootScope.three.animationId = requestAnimationFrame(start);
     renderer.render();
 
   };
 
-  $scope.$watch('$rootScope._data',function(){
+  $scope.$watch('$rootScope.three',function(){
 
-    if (typeof $rootScope._data !== 'undefined') {
+    if (typeof $rootScope.three !== 'undefined') {
 
-      if (typeof $rootScope._data.timestamp !== 'undefined') {
+      if (typeof $rootScope.three.timestamp !== 'undefined') {
 
         $scope.spinner = false;
 
@@ -28,8 +28,8 @@ module.exports = function($scope,$rootScope,socket,renderer) {
         var sphere = new THREE.Mesh( geometry, material );
         var light = new THREE.AmbientLight( 0x404040 );     
 
-        $rootScope._data.scene.add( sphere );
-        $rootScope._data.scene.add( light );      
+        $rootScope.three.scene.add( sphere );
+        $rootScope.three.scene.add( light );      
 
         start();
 

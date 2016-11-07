@@ -19,7 +19,7 @@ app.directive('renderbox',function($rootScope) {
 
         try {
 
-          if (typeof $rootScope._data === 'undefined') {
+          if (typeof $rootScope.three === 'undefined') {
 
             data.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
             data.renderer.setSize(element[0].clientWidth, element[0].clientHeight);
@@ -48,7 +48,7 @@ app.directive('renderbox',function($rootScope) {
             data.timestamp = Date.now();
 
 
-            $rootScope._data = data;
+            $rootScope.three = data;
 
           } else {
 
@@ -66,8 +66,8 @@ app.directive('renderbox',function($rootScope) {
           
       function onMouseMove(event) {
 
-        $rootScope._data.raycasting.mouse.x = ( event.clientX / element[0].clientWidth ) * 2 - 1;
-        $rootScope._data.raycasting.mouse.y = - ( event.clientY / element[0].clientHeight ) * 2 + 1; 
+        $rootScope.three.raycasting.mouse.x = ( event.clientX / element[0].clientWidth ) * 2 - 1;
+        $rootScope.three.raycasting.mouse.y = - ( event.clientY / element[0].clientHeight ) * 2 + 1; 
 
       }
 
@@ -84,7 +84,7 @@ app.directive('renderbox',function($rootScope) {
       window.addEventListener('resize', onWindowResize, false);
       window.addEventListener('mousemove', onMouseMove, false);
 
-      element.append(angular.element($rootScope._data.renderer.domElement));
+      element.append(angular.element($rootScope.three.renderer.domElement));
 
     }
 

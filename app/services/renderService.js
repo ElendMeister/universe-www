@@ -9,32 +9,32 @@ try {
 
 	    	stop: function() {
 
-	    		if ($rootScope._data.animationId !== false) {
+	    		if ($rootScope.three.animationId !== false) {
 
-	    			cancelAnimationFrame( $rootScope._data.animationId );
-	    			$rootScope._data.animationId = false;
+	    			cancelAnimationFrame( $rootScope.three.animationId );
+	    			$rootScope.three.animationId = false;
 
 	    		}
 
 	    	},
 	    	render: function() {
 
-				$rootScope._data.scene.updateMatrixWorld();
+				$rootScope.three.scene.updateMatrixWorld();
 
-	    		if (typeof $rootScope._data !== 'undefined') {
+	    		if (typeof $rootScope.three !== 'undefined') {
 
-	    			// $rootScope._data.camera.translateZ(-10);
+	    			// $rootScope.three.camera.translateZ(-10);
 
-					$rootScope._data.raycasting.raycaster.setFromCamera( $rootScope._data.raycasting.mouse, $rootScope._data.camera );	
-	                var intersects = $rootScope._data.raycasting.raycaster.intersectObjects( $rootScope._data.scene.children, true );
-	                $rootScope._data.raycasting.targets = [];
+					$rootScope.three.raycasting.raycaster.setFromCamera( $rootScope.three.raycasting.mouse, $rootScope.three.camera );	
+	                var intersects = $rootScope.three.raycasting.raycaster.intersectObjects( $rootScope.three.scene.children, true );
+	                $rootScope.three.raycasting.targets = [];
 
 	                if (intersects.length > 0) {
 
-	                    $rootScope._data.raycasting.targets = intersects;
+	                    $rootScope.three.raycasting.targets = intersects;
 
 	                }
-	                $rootScope._data.renderer.render($rootScope._data.scene, $rootScope._data.camera);
+	                $rootScope.three.renderer.render($rootScope.three.scene, $rootScope.three.camera);
 
 
 	    		}

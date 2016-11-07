@@ -12,9 +12,9 @@ app.directive('raycaster',function($rootScope) {
 
 			function target() {
 
-  				if ($rootScope._data.raycasting.targets.length > 0) {
+  				if ($rootScope.three.raycasting.targets.length > 0) {
   				
-  					console.log($rootScope._data.raycasting.targets);
+  					console.log($rootScope.three.raycasting.targets);
 				
 				}
 

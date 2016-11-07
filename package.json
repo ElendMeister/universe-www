@@ -1,0 +1,41 @@
+{
+  "name": "Universe-WWW",
+  "description": "AngularJS Bootstrap for THREEjs using Browserify and Gulp",
+  "author": "H.C.Graamans <graamans@gmail.com>",
+  "license": "MIT",
+  "repository": "bitbucket:cgraamans/universe",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-cookies": "^1.5.6",
+    "angular-route": "^1.5.5",
+    "angular-socket-io": "^0.7.0",
+    "jquery": "^3.1.0",
+    "three": "^0.82.1",
+    "tween.js": "^16.3.5",
+    "socket.io-client": "~1.5.1"
+  },
+  "devDependencies": {
+    "browserify": "~13.1.1",
+    "browserify-shim": "~3.8.12",
+    "connect-livereload": "~0.6.0",
+    "express": "~4.14.0",
+    "gulp": "~3.9.1",
+    "gulp-autoprefixer": "~3.1.1",
+    "gulp-browserify": "~0.5.1",
+    "gulp-clean": "~0.3.2",
+    "gulp-concat": "~2.6.0",
+    "gulp-embedlr": "~0.5.2",
+    "gulp-jshint": "~2.0.2",
+    "gulp-livereload": "~3.8.1",
+    "gulp-rimraf": "^0.2.0",
+    "gulp-sass": "~2.3.2",
+    "gulp-uglify": "~2.0.0",
+    "gulp-util": "~3.0.7",
+    "jshint": "~2.9.4",
+    "pump": "~1.0.1",
+    "tiny-lr": "~1.0.3"
+  },
+  "browserify-shim": {
+    "three": "global:THREE"
+  }
+}

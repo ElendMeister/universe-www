@@ -11,12 +11,18 @@ In short, Universe-www gives you a bundled end-product containing...
 - Ready-to-use Socket.io implementation of the btford-socket-io provider.  
 - THREEjs renderbox  
 - Automatic Raycasting  
-- Use of rootScope object for storage  
-- Phonegap-ready by bootstrapping  
+- Use of rootScope object for storage of three objects
+- Phonegap-ready by bootstrapping angular  
 
 #### Note: If you're looking for a quick standalone socket.io mvc framework for Universe-www, you can't find any quicker or easier than [Sockey, the standalone Socket.io MVC framework](https://github.com/cgraamans/sockey) that I've written. :)
 
-Universe-www Uses:  
+## What can I do with Universe-www
+
+- Quickly develop threejs applications for phones and tablets  
+- Connect to a Socket server for data such as tokenized registration and login ([sockey!](https://github.com/cgraamans/sockey))  
+
+## Universe-www Uses...
+
 - [AngularJS 1.x](https://angularjs.org/)  
   - [Angular-Route](https://docs.angularjs.org/api/ngRoute)  
 - [Socket.io](http://socket.io/)  
@@ -27,7 +33,7 @@ Universe-www Uses:
 - [THREEjs](http://threejs.org)  
 
 
-## Requirements
+## Universe-www Requirements
 
     sudo npm install -g gulp
 
@@ -47,11 +53,20 @@ To run:
 To export:
 
     cd universe-www
-    gulp pack
+    gulp export
 
-To minify:
+To minify (TBD):
 
     cd universe-www
     gulp min
 
+## Under The Hood
+
+- Options for socket settings and routing can be found in **/app/options**.
+
 ### Happy Coding!
+
+#### TODO:
+
+- login and registration with angular-local-storage
+- documentation 

@@ -7,7 +7,8 @@ var gulp = require('gulp'),
     rimraf = require('gulp-rimraf'),
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
-    uglify = require('gulp-uglify');
+    uglify = require('gulp-uglify'),
+    rename = require('gulp-rename');
 
 // Modules for webserver and livereload
 var express = require('express'),
@@ -99,9 +100,16 @@ gulp.task('views', function() {
 
 // Phonegap task
 gulp.task('phonegapView', function() {
+  // gulp.src('dist/index.html')
+  // .pipe(rimraf({force: true}));
+  
+  // gulp.src('dist/index_phonegap.html')
+  // .pipe(rimraf({force: true}));
 
-  gulp.src('app/index_phonegap.html')
-  .pipe(gulp.dest('dist'));
+gulp.src('app/index_phonegap.html')
+  .pipe(rename('index.html'))
+  .pipe(gulp.dest('dist/'))
+
 
 });
 

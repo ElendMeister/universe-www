@@ -60,6 +60,11 @@ To minify (TBD):
     cd universe-www
     gulp min
 
+To prepare for phonegap
+
+    cd universe-www
+    gulp phonegap
+
 ## Under The Hood
 
 - Options for socket settings and routing can be found in **/app/options**.

@@ -25,7 +25,7 @@ server.all('/*', function(req, res) {
 });
 
 // Dev task
-gulp.task('dev', ['clean', 'statics', 'views', 'styles', 'lint', 'browserify'], function() { });
+gulp.task('exp', ['clean', 'statics', 'views', 'styles', 'lint', 'browserify'], function() { });
 
 // Clean task
 gulp.task('clean', function() {
@@ -97,6 +97,14 @@ gulp.task('views', function() {
 
 });
 
+// Phonegap task
+gulp.task('phonegapView', function() {
+
+  gulp.src('app/index_phonegap.html')
+  .pipe(gulp.dest('dist'));
+
+});
+
 gulp.task('watch', ['lint'], function() {
 
   server.listen(serverport);
@@ -119,8 +127,10 @@ gulp.task('watch', ['lint'], function() {
 
 });
 
-gulp.task('default', ['dev', 'watch']);
+gulp.task('default', ['exp', 'watch']);
 
-gulp.task('export',['dev']);
+gulp.task('export',['exp']);
 
-gulp.task('min',['dev']);
+gulp.task('phonegap',['exp','phonegapView']);
+
+gulp.task('min',['exp']);

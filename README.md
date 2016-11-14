@@ -43,6 +43,8 @@ In short, Universe-www gives you a bundled end-product containing...
     cd universe-www
     npm install
 
+If you're going to develop mobile applications you will need to get Phonegap. To install phonegap [read this..](http://phonegap.com/) and then [this](http://assortedgarbage.com/apigee/).
+
 ## Setup
 
 To run:
@@ -65,6 +67,8 @@ To prepare for phonegap
     cd universe-www
     gulp phonegap
 
+Copy the **dist** folder to your phonegap's www folder afterwards.
+
 ## Under The Hood
 
 - Options for socket settings and routing can be found in **/app/options**.
@@ -73,5 +77,6 @@ To prepare for phonegap
 
 #### TODO:
 
-- login and registration with angular-local-storage
-- documentation 
+- login and registration with angular-local-storage 
+- ng-annotate
+- more documentation
